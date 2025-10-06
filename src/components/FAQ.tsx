@@ -3,8 +3,8 @@ import { ChevronDown, ChevronUp, Search } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What is Gridkoss AI and how can it help my business?',
-    answer: 'Gridkoss AI is a comprehensive artificial intelligence solution that helps businesses automate processes, gain insights from data, and improve decision-making through advanced analytics and machine learning technologies.'
+    question: 'What is CommandoAI AI and how can it help my business?',
+    answer: 'CommandoAI AI is a comprehensive artificial intelligence solution that helps businesses automate processes, gain insights from data, and improve decision-making through advanced analytics and machine learning technologies.'
   },
   {
     question: 'How secure is your AI platform?',
@@ -23,8 +23,8 @@ const faqs = [
     answer: 'Implementation time varies depending on the complexity of your needs, but typically ranges from 2-8 weeks. We work closely with your team to ensure a smooth and efficient deployment process.'
   },
   {
-    question: 'What makes Gridkoss different from other AI providers?',
-    answer: 'Gridkoss stands out through our combination of cutting-edge AI technology, industry expertise, customizable solutions, and dedicated support, ensuring you get the most value from your AI implementation.'
+    question: 'What makes CommandoAI different from other AI providers?',
+    answer: 'CommandoAI stands out through our combination of cutting-edge AI technology, industry expertise, customizable solutions, and dedicated support, ensuring you get the most value from your AI implementation.'
   }
 ];
 
@@ -57,7 +57,7 @@ export default function FAQ() {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 bg-[#1A1A1A] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8A2BE2] pr-12"
+              className="w-full px-4 py-3 bg-[#1A1A1A] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1e3a8a] pr-12"
             />
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
@@ -75,16 +75,15 @@ export default function FAQ() {
               >
                 <span className="font-semibold">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-[#8A2BE2]" />
+                  <ChevronUp className="w-5 h-5 text-[#1e3a8a]" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-[#8A2BE2]" />
+                  <ChevronDown className="w-5 h-5 text-[#1e3a8a]" />
                 )}
               </button>
-              
+
               <div
-                className={`px-6 transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-48 py-4' : 'max-h-0'
-                } overflow-hidden`}
+                className={`px-6 transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 py-4' : 'max-h-0'
+                  } overflow-hidden`}
               >
                 <p className="text-gray-400">{faq.answer}</p>
               </div>

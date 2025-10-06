@@ -66,9 +66,8 @@ function TerminalAnimation() {
       {lines.slice(0, currentLine + 1).map((line, index) => (
         <div
           key={index}
-          className={`${
-            line.startsWith('$') ? 'text-blue-400' : 'text-gray-300'
-          } ${index === currentLine ? 'animate-pulse' : ''}`}
+          className={`${line.startsWith('$') ? 'text-blue-400' : 'text-gray-300'
+            } ${index === currentLine ? 'animate-pulse' : ''}`}
         >
           {line}
         </div>
@@ -94,7 +93,7 @@ function ChartAnimation() {
       {data.map((height, index) => (
         <div
           key={index}
-          className="bg-gradient-to-t from-[#8A2BE2] to-[#9370DB] w-6 rounded-t transition-all duration-1000"
+          className="bg-gradient-to-t from-[#1e3a8a] to-[#1d4ed8] w-6 rounded-t transition-all duration-1000"
           style={{ height: `${height}%` }}
         />
       ))}
@@ -132,14 +131,14 @@ function StrategyAnimation() {
                 y1={`${node.y}%`}
                 x2={`${targetNode.x}%`}
                 y2={`${targetNode.y}%`}
-                stroke="#8A2BE2"
+                stroke="#1e3a8a"
                 strokeWidth="1"
                 opacity="0.3"
               />
             ))}
           </g>
         ))}
-        
+
         {/* Nodes */}
         {nodes.map((node, index) => (
           <g key={index}>
@@ -147,8 +146,8 @@ function StrategyAnimation() {
               cx={`${node.x}%`}
               cy={`${node.y}%`}
               r="8"
-              fill={activeNode === index ? '#8A2BE2' : '#1A1A1A'}
-              stroke="#8A2BE2"
+              fill={activeNode === index ? '#1e3a8a' : '#1A1A1A'}
+              stroke="#1e3a8a"
               strokeWidth="2"
               className="transition-all duration-500"
             />
@@ -190,9 +189,8 @@ function DevelopmentAnimation() {
       {codeBlocks.map((line, index) => (
         <div
           key={index}
-          className={`transition-all duration-300 ${
-            index <= activeBlock ? 'text-blue-400 opacity-100' : 'text-gray-600 opacity-50'
-          }`}
+          className={`transition-all duration-300 ${index <= activeBlock ? 'text-blue-400 opacity-100' : 'text-gray-600 opacity-50'
+            }`}
         >
           <span className="text-gray-500">{index + 1}</span>
           <span className="ml-2">{line}</span>
@@ -222,7 +220,7 @@ function DevelopmentAnimation() {
 //           <div
 //             className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
 //               index <= flowStep
-//                 ? 'border-[#8A2BE2] bg-[#8A2BE2] text-white'
+//                 ? 'border-[#1e3a8a] bg-[#1e3a8a] text-white'
 //                 : 'border-gray-600 text-gray-600'
 //             }`}
 //           >
@@ -232,7 +230,7 @@ function DevelopmentAnimation() {
 //           {index < steps.length - 1 && (
 //             <div
 //               className={`absolute w-8 h-0.5 mt-6 ml-12 transition-all duration-500 ${
-//                 index < flowStep ? 'bg-[#8A2BE2]' : 'bg-gray-600'
+//                 index < flowStep ? 'bg-[#1e3a8a]' : 'bg-gray-600'
 //               }`}
 //             />
 //           )}
@@ -276,8 +274,8 @@ function DataEngineeringAnimation() {
           <span>Processed Data</span>
         </div>
         <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
-          <div 
-            className="absolute h-full bg-gradient-to-r from-[#8A2BE2] to-[#9370DB] rounded-full transition-all duration-100"
+          <div
+            className="absolute h-full bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] rounded-full transition-all duration-100"
             style={{ width: `${(dataFlow % 100)}%` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
@@ -288,33 +286,31 @@ function DataEngineeringAnimation() {
       <div className="flex items-center justify-between relative">
         {/* Connection Lines */}
         <div className="absolute top-6 left-0 w-full h-0.5 bg-gray-600 -translate-y-1/2" />
-        
+
         {steps.map((step, index) => {
           const StepIcon = step.icon;
           const isActive = index <= flowStep;
           const isCurrent = index === flowStep;
-          
+
           return (
             <div key={index} className="relative z-10 flex flex-col items-center">
               <div
-                className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
-                  isActive
-                    ? 'border-[#8A2BE2] bg-[#8A2BE2] text-white scale-110'
+                className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${isActive
+                    ? 'border-[#1e3a8a] bg-[#1e3a8a] text-white scale-110'
                     : 'border-gray-600 bg-[#1A1A1A] text-gray-600'
-                } ${isCurrent ? ' shadow-lg shadow-purple-500/50' : ''}`}
+                  } ${isCurrent ? ' shadow-lg shadow-blue-500/50' : ''}`}
               >
                 <StepIcon className="w-4 h-4" />
               </div>
-              <span className={`text-xs mt-2 transition-colors ${
-                isActive ? 'text-white' : 'text-gray-500'
-              }`}>
+              <span className={`text-xs mt-2 transition-colors ${isActive ? 'text-white' : 'text-gray-500'
+                }`}>
                 {step.name}
               </span>
-              
+
               {/* Data packets flowing */}
               {/* {isActive && index < steps.length - 1 && (
                 <div className="absolute top-5 left-10 w-8 h-1">
-                  <div className="w-20 h-1 bg-[#8A2BE2] rounded-full animate-ping" />
+                  <div className="w-20 h-1 bg-[#1e3a8a] rounded-full animate-ping" />
                 </div>
               )} */}
             </div>
@@ -371,7 +367,7 @@ function SEOAnimation() {
       <div className="bg-white/5 rounded-lg p-2 border border-white/10">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center space-x-2">
-            <Search className="w-3 h-3 text-[#8A2BE2]" />
+            <Search className="w-3 h-3 text-[#1e3a8a]" />
             <span className="text-xs text-gray-300">SEO Console</span>
           </div>
           <div className="flex space-x-1">
@@ -391,27 +387,24 @@ function SEOAnimation() {
         {rankings.map((item, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between p-1 rounded transition-all duration-300 ${
-              index === currentKeyword ? 'bg-[#8A2BE2]/20 border border-[#8A2BE2]/50' : 'bg-white/5'
-            }`}
+            className={`flex items-center justify-between p-1 rounded transition-all duration-300 ${index === currentKeyword ? 'bg-[#1e3a8a]/20 border border-[#1e3a8a]/50' : 'bg-white/5'
+              }`}
           >
             <div className="flex items-center space-x-2">
-              <div className={`w-4 h-4 rounded text-xs flex items-center justify-center font-bold ${
-                item.rank <= 3 ? 'bg-green-500 text-white' : 
-                item.rank <= 7 ? 'bg-yellow-500 text-black' : 'bg-red-500 text-white'
-              }`}>
+              <div className={`w-4 h-4 rounded text-xs flex items-center justify-center font-bold ${item.rank <= 3 ? 'bg-green-500 text-white' :
+                  item.rank <= 7 ? 'bg-yellow-500 text-black' : 'bg-red-500 text-white'
+                }`}>
                 {item.rank}
               </div>
               <span className="text-xs text-gray-300 truncate">{item.keyword}</span>
             </div>
             <div className="flex items-center space-x-1">
-              <TrendingUp className={`w-3 h-3 ${
-                item.trend === 'up' ? 'text-green-400' : 
-                item.trend === 'down' ? 'text-red-400 rotate-180' : 'text-gray-400'
-              }`} />
+              <TrendingUp className={`w-3 h-3 ${item.trend === 'up' ? 'text-green-400' :
+                  item.trend === 'down' ? 'text-red-400 rotate-180' : 'text-gray-400'
+                }`} />
               <div className="w-8 h-1 bg-gray-600 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-[#8A2BE2] to-[#9370DB] rounded-full transition-all duration-1000"
+                <div
+                  className="h-full bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] rounded-full transition-all duration-1000"
                   style={{ width: `${Math.max(10, 100 - (item.rank * 10))}%` }}
                 />
               </div>
@@ -443,15 +436,13 @@ function AgentsAnimation() {
       {agents.map((agent, index) => (
         <div
           key={index}
-          className={`flex items-center justify-between p-2 rounded-lg transition-all duration-500 ${
-            index === activeAgent ? 'bg-[#8A2BE2]/20 border border-[#8A2BE2]' : 'bg-white/5'
-          }`}
+          className={`flex items-center justify-between p-2 rounded-lg transition-all duration-500 ${index === activeAgent ? 'bg-[#1e3a8a]/20 border border-[#1e3a8a]' : 'bg-white/5'
+            }`}
         >
           <div className="flex items-center">
             <div
-              className={`w-2 h-2 rounded-full mr-2 ${
-                index === activeAgent ? 'bg-green-400 animate-pulse' : 'bg-gray-600'
-              }`}
+              className={`w-2 h-2 rounded-full mr-2 ${index === activeAgent ? 'bg-green-400 animate-pulse' : 'bg-gray-600'
+                }`}
             />
             <span className="text-xs text-gray-300">{agent.name}</span>
           </div>
@@ -494,25 +485,25 @@ export default function Services() {
         <p className="text-center text-gray-300 mb-12">
           Tailored solutions to streamline, innovate, and grow.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-[#1A1A1A] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-gradient-to-br hover:from-[#8A2BE2]/10 hover:to-transparent"
+              className="group relative bg-[#1A1A1A] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-gradient-to-br hover:from-[#1e3a8a]/10 hover:to-transparent"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#8A2BE2] to-[#9370DB] p-2.5 mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1e3a8a] to-[#1d4ed8] p-2.5 mr-4">
                     <service.icon className="w-full h-full text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-400 mb-6">{service.description}</p>
-                
+
                 {/* Interactive Animation Area */}
                 <div className="bg-[#0A0A0A] rounded-lg p-4 mb-4 border border-white/5">
                   {getAnimationComponent(service.animation)}

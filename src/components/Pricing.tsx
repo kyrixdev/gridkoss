@@ -54,48 +54,46 @@ export default function Pricing() {
           Pricing Plans
         </h2>
         <p className="text-center text-gray-300 mb-12">
-         Transparent pricing designed to fit your requirements.
+          Transparent pricing designed to fit your requirements.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-[#1A1A1A] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 ${
-                plan.popular ? 'border-2 border-[#8A2BE2]' : 'border border-white/10'
-              }`}
+              className={`relative bg-[#1A1A1A] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 ${plan.popular ? 'border-2 border-[#1e3a8a]' : 'border border-white/10'
+                }`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               {plan.popular && (
-                <div className="absolute top-4 right-4 bg-[#8A2BE2] text-white text-sm font-semibold px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-[#1e3a8a] text-white text-sm font-semibold px-3 py-1 rounded-full">
                   Popular
                 </div>
               )}
-              
+
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-400 mb-6">{plan.description}</p>
-                
+
                 <div className="mb-8">
                   <span className="text-4xl font-bold text-white">${plan.price}</span>
                   <span className="text-gray-400">/month</span>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <Check className="w-5 h-5 text-[#8A2BE2] mr-3" />
+                      <Check className="w-5 h-5 text-[#1e3a8a] mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-[#8A2BE2] to-[#9370DB] text-white hover:shadow-lg hover:shadow-purple-500/25'
+
+                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${plan.popular
+                    ? 'bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] text-white hover:shadow-lg hover:shadow-blue-500/25'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
+                  }`}>
                   Get Started
                 </button>
               </div>

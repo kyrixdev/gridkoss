@@ -36,7 +36,7 @@ export default function Process() {
         </p>
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#8A2BE2] to-[#9370DB] transform -translate-y-1/2 opacity-20 hidden md:block" />
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] transform -translate-y-1/2 opacity-20 hidden md:block" />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
@@ -49,14 +49,14 @@ export default function Process() {
               >
                 <div className={`
                   relative bg-[#1A1A1A] p-6 rounded-2xl transition-all duration-300
-                  ${activeStep === index ? 'scale-105 bg-gradient-to-br from-[#8A2BE2]/10 to-transparent' : ''}
+                  ${activeStep === index ? 'scale-105 bg-gradient-to-br from-[#1e3a8a]/10 to-transparent' : ''}
                 `}>
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-[#8A2BE2] to-[#9370DB] rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-[#1e3a8a] to-[#1d4ed8] rounded-full flex items-center justify-center text-white font-bold">
                     {index + 1}
                   </div>
                   
                   <div className="w-12 h-12 mb-4 rounded-lg bg-[#1A1A1A] border border-white/10 flex items-center justify-center">
-                    <step.icon className="w-6 h-6 text-[#8A2BE2]" />
+                    <step.icon className="w-6 h-6 text-[#1e3a8a]" />
                   </div>
                   
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
@@ -64,7 +64,7 @@ export default function Process() {
                   
                   <div className="mt-4 h-1 bg-white/5 rounded-full overflow-hidden">
                     <div 
-                      className="h-full bg-gradient-to-r from-[#8A2BE2] to-[#9370DB] rounded-full transition-all duration-500"
+                      className="h-full bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] rounded-full transition-all duration-500"
                       style={{ 
                         width: activeStep >= index ? '100%' : '0%',
                         opacity: activeStep >= index ? 1 : 0.2

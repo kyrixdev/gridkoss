@@ -6,13 +6,13 @@ const testimonials = [
     name: 'Sarah Johnson',
     role: 'CTO at TechCorp',
     image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg',
-    quote: 'Gridkoss has transformed our AI operations. The results have been nothing short of extraordinary.'
+    quote: 'CommandoAI has transformed our AI operations. The results have been nothing short of extraordinary.'
   },
   {
     name: 'Michael Chen',
     role: 'Director of Innovation',
     image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
-    quote: 'The level of expertise and support we received from Gridkoss was exceptional. Highly recommended!'
+    quote: 'The level of expertise and support we received from CommandoAI was exceptional. Highly recommended!'
   },
   {
     name: 'Emily Rodriguez',
@@ -113,9 +113,8 @@ export default function Testimonials() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-[#8A2BE2]' : 'bg-gray-600'
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors ${index === currentIndex ? 'bg-[#1e3a8a]' : 'bg-gray-600'
+                  }`}
               />
             ))}
           </div>
