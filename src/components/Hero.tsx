@@ -102,53 +102,6 @@ export default function Hero() {
               Watch Video
             </button>
           </div>
-          <div className="relative mt-12 w-1/2 mx-auto">
-            {/* Gradient shadows */}
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-16 z-20 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-16 z-20 bg-gradient-to-l from-black/80 via-black/40 to-transparent" />
-
-            {/* Carousel */}
-            <div className="overflow-hidden w-full mx-auto">
-              <div
-                className="flex gap-10 animate-logo-scroll items-center"
-                style={{
-                  minWidth: '500%',
-                }}
-              >
-                {/* Repeat logos twice for seamless looping */}
-                {[...Array(2)].map((_, idx) => (
-                  <div className="flex gap-10" key={idx}>
-                    {/* Replace these with your actual logo images */}
-                    <img src="download.svg" alt="Logo 1" className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="download.svg" alt="Logo 2" className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="download.svg" alt="Logo 3" className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="download.svg" alt="Logo 4" className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition" />
-                    <img src="download.svg" alt="Logo 5" className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Animation styles */}
-            <style jsx>{`
-              @keyframes logo-scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-              }
-              .animate-logo-scroll {
-                animation: logo-scroll 30s linear infinite;
-              }
-              @media (max-width: 640px) {
-                .animate-logo-scroll img {
-                  height: 2.5rem;
-                }
-                .pointer-events-none {
-                  width: 2.5rem;
-                }
-              }
-            `}
-            </style>
-          </div>
         </div>
       </div>
 

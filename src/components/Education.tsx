@@ -558,9 +558,9 @@ export default function Education() {
                                     </div>
 
                                     {/* Enroll Button */}
-                                    <button className="w-full py-3 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] text-white hover:shadow-lg hover:shadow-blue-500/25">
+                                    <a href='#contact' className="block w-full py-3 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-[#1e3a8a] to-[#1d4ed8] text-white hover:shadow-lg hover:shadow-blue-500/25">
                                         Enroll Now
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         );

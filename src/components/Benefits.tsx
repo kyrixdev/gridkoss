@@ -31,7 +31,7 @@ export default function Benefits() {
           Why Choose CommandoAI
         </span>
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-white mb-12 w-1/2 mx-auto">
-          We are GridKoos, we help founders like you to automate their day to day business operations with the help of AI
+          We are CommandoAI, we help founders like you to automate their day to day business operations with the help of AI
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:w-3/4 mx-auto">
